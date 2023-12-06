@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Off The Reel</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <section id="landing">
-        <div class="row">
-            <nav>
-                <figure>
-                    <img class="nav__logo" src="assets/Off The Reel Logo.png" alt="Off The Reel Logo">
-                </figure>
-                <ul class="nav__links">
-                    <li class="nav__link">
-                        <a href="#" class="link__hover-effect">Home</a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#" class="link__hover-effect">Search</a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#" class="link__hover-effect">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <header class="header">
-                <div class="header__content">
-                    <h1 class="title">Welcome To</h1>
-                    <h1 class="title blue">Off The Reel</h1>
-                </div>
-            </header>
-            <form action="" class="search-bar">
-                <input type="text" placeholder="Search for Film or Series" name="q">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
+      <div class="row">
+        <nav>
+          <figure>
+            <img
+              class="nav__logo"
+              src="assets/Off The Reel Logo.png"
+              alt="Off The Reel Logo"
+            />
+          </figure>
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="#" class="link__hover-effect">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="link__hover-effect">Search</a>
+            </li>
+            <li class="nav__link">
+              <button class="btn">Contact</button>
+            </li>
+          </ul>
+        </nav>
+        <header class="header">
+          <div class="header__content">
+            <h1 class="title">Welcome To</h1>
+            <h1 class="title blue">Off The Reel</h1>
+          </div>
+        </header>
+        <div class="search-bar__container">
+          <form action="" class="search-bar">
+            <input
+              type="text"
+              placeholder="Search for Film or Series"
+              onchange="onSearchChange(event)"
+            />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
         </div>
+      </div>
     </section>
-</body>
+    <section id="results">
+      <div class="films-list">
+        <div class="films">
+          <div class="films__title">
+            Film Title
+          </div>
+          <p class="films__body">
+            Film Body
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

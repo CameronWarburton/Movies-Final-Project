@@ -29,6 +29,21 @@ li {
     list-style-type: none;
 }
 
+.btn {
+    background-color: #0e0cf3;
+    color: white;
+    padding: 12px 36px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #131090;
+}
+
 .link__hover-effect {
     position: relative;
 }
@@ -74,6 +89,7 @@ nav {
 .nav__links {
     display: flex;
     align-items: center;
+    color: #242424;
 }
 
 .nav__link {
@@ -101,6 +117,8 @@ nav {
     border-radius: 60px;
     padding: 10px 20px;
     margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-bar input {
@@ -110,10 +128,10 @@ nav {
     outline: none;
     padding: 24px 20px;
     font-size: 20px;
-    color: #cac7ff;
+    color: #0e0cf3;
 }
 ::placeholder {
-    color: #0e0cf3;
+    color: #100cf37b;
 }
 
 .search-bar button i {
@@ -123,9 +141,18 @@ nav {
 .search-bar button {
     border: 0;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background: rgba(187, 178, 178, 0.2);
     cursor: pointer;
 }
 
+.search-bar button:hover{
+    background: #100cf394;
+}
+
+.search-bar__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
