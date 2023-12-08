@@ -14,6 +14,11 @@ html {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+h1 {
+    font-size: 50px;
 }
 
 a {
@@ -70,6 +75,10 @@ body {
 
 .blue {
     color: #0e0cf3;
+}
+
+#filter {
+    margin-bottom: 40px;
 }
 
 /* NAVIGATION  */
@@ -159,3 +168,47 @@ nav {
 
 /* FEATURED FILMS  */
 
+.featured__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.film {
+    margin-bottom: 32px;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.film__img--wrapper {
+    margin-bottom: 12px;
+}
+
+.film__img {
+    max-height: 500px;
+    transition: all 300ms ease;
+    cursor: not-allowed;
+}
+
+.films__title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.films__body {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.film:hover .film__img {
+    transform: scale(1.03);
+}
