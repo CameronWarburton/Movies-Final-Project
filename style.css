@@ -77,10 +77,6 @@ body {
     color: #0e0cf3;
 }
 
-#filter {
-    margin-bottom: 40px;
-}
-
 /* NAVIGATION  */
 
 nav {
@@ -189,13 +185,13 @@ nav {
 }
 
 .film__img--wrapper {
-    margin-bottom: 12px;
 }
 
 .film__img {
     max-height: 500px;
     transition: all 300ms ease;
     cursor: not-allowed;
+    margin-bottom: 32px;
 }
 
 .films__title {
@@ -209,6 +205,11 @@ nav {
     font-weight: 400;
 }
 
-.film:hover .film__img {
+.film__img:hover {
     transform: scale(1.03);
+}
+
+.films__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
 }
