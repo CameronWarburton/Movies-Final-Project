@@ -171,7 +171,7 @@ nav {
     margin-bottom: 50px;
 }
 
-.films {
+.films-list {
     display: flex;
     flex-wrap: wrap;
 }
@@ -182,9 +182,6 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.film__img--wrapper {
 }
 
 .film__img {
