@@ -5,7 +5,7 @@ async function onSearchChange(event) {
   renderFilms(title);
 }
 
-async function renderFilms(title = "fast") {
+async function renderFilms(title = "Fast") {
   const films = await fetch(
     `http://www.omdbapi.com/?s=${title}&apikey=7f137b53`
   );
