@@ -10,11 +10,12 @@ async function renderFilms(title = "Fast") {
     `http://www.omdbapi.com/?s=${title}&apikey=7f137b53`
   );
   const filmsData = await films.json();
-  console.log(filmsData);
-  filmsListEl.innerHTML = filmsData.Search.map((film) => filmsHTML(film)).join(
+  const limitedFilms = filmsData.Search.slice(0, 6);
+  filmsListEl.innerHTML = limitedFilms.map((film) => filmsHTML(film)).join(
     ""
   );
 }
+
 
 function filmsHTML(film) {
   return `
