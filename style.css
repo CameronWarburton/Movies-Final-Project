@@ -313,6 +313,10 @@ nav {
 
 /* SMALL PHONES */
 @media (max-width: 550px) {
+    .title {
+        font-size: 55px;
+    }
+
     .nav__link {
         display: none;
     }
@@ -322,7 +326,7 @@ nav {
     }
 
     .film__img {
-        max-height: 300px;
+        max-height: 275px;
     }
 
     .films__title {
