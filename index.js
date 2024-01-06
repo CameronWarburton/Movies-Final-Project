@@ -63,6 +63,15 @@ function hideSkeletonState() {
   filmsListEl.innerHTML = "";
 }
 
+function onFormSubmit(event) {
+
+  event.preventDefault();
+
+  const input = event.target.querySelector("input");
+  const title = input.value;
+  renderFilms(title);
+}
+
 renderFilms();
 
 function redirectToPage() {
