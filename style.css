@@ -318,16 +318,20 @@ nav {
     }
 
     .search-bar {
-        max-width: 450px;
+        max-width: 380px;
     }
 
     .film__img {
-        max-height: 360px;
+        max-height: 300px;
     }
 
     .films__title {
         font-size: 18px;
         text-align: center;
+    }
+
+    .featured__title {
+        font-size: 36px;
     }
 }
 
