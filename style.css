@@ -146,6 +146,14 @@ body {
     cursor: pointer;
 }
 
+.skeleton {
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    height: 70px;
+    width: 100%;
+  }
+
 /* NAVIGATION  */
 
 nav {

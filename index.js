@@ -7,6 +7,7 @@ function openMenu() {
   }
 
 const filmsListEl = document.querySelector(".films-list");
+const loadingIndicatorEl = document.getElementById("loadingIndicator");
 
 async function onSearchChange(event) {
   const title = event.target.value;
@@ -14,11 +15,15 @@ async function onSearchChange(event) {
 }
 
 async function renderFilms(title = "Fast") {
+  showLoadingIndicator();
+  showSkeletonState();
   const films = await fetch(
     `http://www.omdbapi.com/?s=${title}&apikey=7f137b53`
   );
   const filmsData = await films.json();
   const limitedFilms = filmsData.Search.slice(0, 6);
+  hideLoadingIndicator();
+  hideSkeletonState();
   filmsListEl.innerHTML = limitedFilms.map((film) => filmsHTML(film)).join(
     ""
   );
@@ -39,6 +44,23 @@ function filmsHTML(film) {
               <p class="films__body">Year: ${film.Year}</p>
             </div>
   `;
+}
+
+function showLoadingIndicator() {
+  loadingIndicatorEl.style.display = "block";
+}
+
+function hideLoadingIndicator() {
+  loadingIndicatorEl.style.display = "none";
+}
+
+function showSkeletonState() {
+  const skeletonElements = Array.from({ length: 6 }, (_, index) => `<li class="skeleton" key=${index}></li>`);
+  filmsListEl.innerHTML = skeletonElements.join("");
+}
+
+function hideSkeletonState() {
+  filmsListEl.innerHTML = "";
 }
 
 renderFilms();
