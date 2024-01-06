@@ -77,6 +77,75 @@ body {
     color: #0e0cf3;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #0e0cf3;
+    display: none;
+    cursor: pointer;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #F7FAFC;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    font-size: 40px;
+    color: black;
+}
+
+.menu__link:hover {
+    text-decoration: underline #0e0cf3;
+    color: #0e0cf3;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    padding: 8px;
+    color: white;
+}
+
+.fa-times {
+    color: black;
+    cursor: pointer;
+}
+
 /* NAVIGATION  */
 
 nav {
@@ -209,4 +278,66 @@ nav {
 .films__title:hover {
     text-decoration: underline;
     cursor: not-allowed;
+}
+
+/* Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+    ul {
+        display: none;
+    }
+
+    .title {
+        font-size: 70px;
+    }
+
+    .search-bar {
+        max-width: 600px;
+    }
+
+    .film__img {
+        max-height: 400px;
+    }
+
+    .film {
+        width: calc(100% / 2);
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 550px) {
+    .nav__link {
+        display: none;
+    }
+
+    .search-bar {
+        max-width: 500px;
+    }
+
+    .film__img {
+        max-height: 360px;
+    }
+
+    .films__title {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+/* NAV LINKS */
+@media (max-width: 873px) {
+    nav {
+        margin: 30px;
+    }
+
+    .nav__link {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .signup__btn {
+        display: none;
+    }
 }

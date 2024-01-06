@@ -33,6 +33,24 @@
               <button class="btn" onclick="redirectToPage()">Contact</button>
             </li>
           </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#featured" class="menu__link" onclick="closeMenu()">Movies</a>
+              </li>
+              <li class="menu__list">
+                <button class="btn">Contact</button>
+              </li>
+            </ul>
         </nav>
         <header class="header">
           <div class="header__content">
