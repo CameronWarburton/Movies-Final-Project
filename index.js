@@ -34,3 +34,7 @@ function filmsHTML(film) {
 }
 
 renderFilms();
+
+function redirectToPage() {
+  window.open("https://cameronwarburton.github.io/Advance-E-Portfolio/", "_blank");
+}
