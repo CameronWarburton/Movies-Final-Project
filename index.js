@@ -18,7 +18,7 @@ async function renderFilms(title = "Fast") {
   showLoadingIndicator();
   showSkeletonState();
   const films = await fetch(
-    `http://www.omdbapi.com/?s=${title}&apikey=7f137b53`
+    `https://www.omdbapi.com/?s=${title}&apikey=7f137b53`
   );
   const filmsData = await films.json();
   const limitedFilms = filmsData.Search.slice(0, 6);
